@@ -20,4 +20,4 @@ lecture_mine_full = list(
 lecture_mine_full.sort(key=lambda x: x['date'])
 
 for lecture in lecture_mine_full:
-    print(f'[{lecture["date"]}] {lecture["title"]}')
+    print(f'[{lecture["date"]}][{lecture["mentor"]}]\t{lecture["title"]}')
