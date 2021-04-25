@@ -21,8 +21,10 @@ for i in range(1, 100):
         items = row.find_all('td')
         if len(items) < 5:
             continue
+        aTag = items[1].find('a')
         data = {
-            'title': items[1].find('a').text.strip(),
+            'title': aTag.text.strip(),
+            'link': f'https://www.swmaestro.org{aTag["href"]}',
             'date': items[3].text.strip(),
             'available': items[5].text.strip(),
             'mentor': items[6].text.strip()
