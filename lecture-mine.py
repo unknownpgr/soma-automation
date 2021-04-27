@@ -18,10 +18,12 @@ for i in range(1, 100):
         break
     for row in contents:
         items = row.find_all('td')
-        if len(items) < 5:
+        if len(items) < 3:
+            print(len(items))
             continue
-        title = items[2].text.strip()
-        registered = items[4].text.strip()
+        title = items[1].text.strip()
+        registered = items[3].text.strip()
+        print(f'[{registered}]  {title}')
         lectures.append({'title': title, 'registered': registered})
 
 with open('lecture-mine.json', 'w') as f:
