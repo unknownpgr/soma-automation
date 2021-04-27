@@ -26,6 +26,8 @@ lecture_mine_full = list(
 lecture_mine_full.sort(key=lambda x: x['date'])
 
 date_today = datetime.today()
+date_today = date_today.replace(hour=0, minute=0, second=0, microsecond=0)
+
 print('Today :', date_today.strftime("%Y-%m-%d"))
 print()
 
