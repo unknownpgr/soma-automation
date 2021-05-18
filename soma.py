@@ -32,7 +32,6 @@ def login(username, password):
     })
     password, username = get_input_value(res.text, ['password', 'username'])
     print('Get userName :', username)
-    print('Get password :', password)
 
     s.post('https://www.swmaestro.org/sw/login.do', data={
         'password': password,
